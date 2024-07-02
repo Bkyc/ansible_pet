@@ -1,0 +1,6 @@
+- name: Подготовка системы
+  hosts: all_ws
+  become: true
+  roles:
+    - base_setup
+    - install_docker

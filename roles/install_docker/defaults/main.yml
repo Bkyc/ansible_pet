@@ -1,0 +1,12 @@
+---
+install_docker_pkg_base:
+  - ca-certificates
+  - curl
+  - gnupg
+
+install_docker_pkg_docker:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin

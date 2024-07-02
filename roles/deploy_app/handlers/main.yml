@@ -1,0 +1,8 @@
+---
+- name: Перезапуск контейнера nginx
+  community.docker.docker_compose_v2:
+    project_src: "{{ deploy_app_dir_dest }}"
+    services:
+      - nginx
+    state: present
+    recreate: always

@@ -1,0 +1,6 @@
+---
+name: base_setup
+version: 0.1
+description: Роль для деплоя контейнеризированного приложения nginx+php+mysql
+author: Bkyc <Bkyclife@gmail.com>
+license: MIT License

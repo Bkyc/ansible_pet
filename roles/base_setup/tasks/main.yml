@@ -1,0 +1,20 @@
+---
+- name: Обновление всех пакетов
+  ansible.builtin.apt:
+    update_cache: true
+    upgrade: safe
+
+- name: Установка необходимых пакетов
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    update_cache: true
+    state: present
+    name: "{{ base_setup_pkg }}"
+
+- name: Начальные конфигурации
+  ansible.builtin.copy:
+    src: ./
+    dest: ~/
+    owner: "{{ remote_user }}"
+    group: "{{ remote_user }}"
+    mode: "0644"

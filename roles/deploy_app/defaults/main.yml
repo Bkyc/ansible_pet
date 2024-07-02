@@ -1,0 +1,7 @@
+---
+deploy_app_dns_name: my_awesome.project
+# deploy_app_user: www
+# deploy_app_user_id: "1000"
+deploy_app_dir_dest: /opt/webapp/
+deploy_app_dest_compose: "{{ deploy_app_dir_dest }}compose.yml"
+deploy_app_dest_nginx_conf: "{{ deploy_app_dir_dest }}nginx.conf"

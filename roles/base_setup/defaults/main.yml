@@ -1,0 +1,11 @@
+---
+base_setup_pkg:
+  - ca-certificates
+  - curl
+  - git
+  - gnupg
+  - htop
+  - iftop
+  - lm-sensors
+  - mc
+  - wget

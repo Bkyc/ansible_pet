@@ -1,0 +1,22 @@
+---
+- name: Копирование файлов проекта
+  ansible.builtin.copy:
+    src: ./
+    dest: "{{ deploy_app_dir_dest }}"
+    owner: "{{ remote_user }}"
+    group: "{{ remote_user }}"
+    mode: "0644"
+
+- name: Генерация nginx.conf
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: "{{ deploy_app_dest_nginx_conf }}"
+    owner: "{{ remote_user }}"
+    group: "{{ remote_user }}"
+    mode: "0644"
+  notify: Перезапуск контейнера nginx
+
+- name: Запуск docker-compose
+  community.docker.docker_compose_v2:
+    project_src: "{{ deploy_app_dir_dest }}"
+    state: present

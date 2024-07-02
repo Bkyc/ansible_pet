@@ -1,0 +1,5 @@
+- name: Подготовка системы
+  hosts: all_ws
+  become: true
+  roles:
+    - deploy_app

@@ -1,0 +1,6 @@
+---
+name: base_setup
+version: 0.1
+description: Роль для базовой подготовки и настройки ОС
+author: Bkyc <Bkyclife@gmail.com>
+license: MIT License
