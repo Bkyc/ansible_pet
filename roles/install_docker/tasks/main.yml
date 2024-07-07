@@ -37,3 +37,9 @@
     update_cache: true
     state: present
     name: "{{ install_docker_pkg_docker }}"
+
+- name: Запуск сервиса Docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
